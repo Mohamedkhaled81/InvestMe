@@ -1,8 +1,18 @@
 .table-container {
     min-width: 850px;
+    position: relative;
     border-radius: 12px;
     height: 60vh;
+    background-color: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     overflow-y: auto;
+}
+
+h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .table-container::-webkit-scrollbar {
@@ -27,7 +37,6 @@ table {
     width: 100%;
     background: white;
     padding: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     border-collapse: collapse;
 }
 

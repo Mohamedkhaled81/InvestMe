@@ -1,12 +1,17 @@
-<form>
+<form (ngSubmit)="handleSubmit()">
     <h2>Investment Data</h2>
-    <label>Initial Investment</label>
-    <input type="text">
-    <label>Annual Investment</label>
-    <input type="text">
-    <label>Expected Return</label>
-    <input type="text">
-    <label>Duration</label>
-    <input type="text">
-    <button>Calculate</button>
+
+    <label for="initial">Initial Investment</label>
+    <input id="initial" name="initial" type="number" placeholder="e.g. 10000" required [(ngModel)]="investData().initial">
+
+    <label for="annual">Annual Investment</label>
+    <input id="annual" name="annual" type="number" placeholder="e.g. 1200" required [(ngModel)]="investData().annual">
+
+    <label for="return">Expected Return (%)</label>
+    <input id="return" name="expected" type="number" placeholder="e.g. 5" required [(ngModel)]="investData().expected">
+
+    <label for="duration">Duration (years)</label>
+    <input id="duration" name="duration" type="number" placeholder="e.g. 10" required [(ngModel)]="investData().duration">
+
+    <button type="submit">Calculate</button>
 </form>
