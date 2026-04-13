@@ -1,5 +1,5 @@
 import { Component, signal } from '@angular/core';
-import { InvestmentService } from '../../services/InvestmentService';
+import { InvestmentService } from '../../services/investment.service';
 import { FormsModule } from '@angular/forms';
 import IInvestData from '../utils/investData';
 
@@ -15,7 +15,11 @@ export class AddFormComponent {
   constructor(private investmentService: InvestmentService) {}
 
   handleSubmit() {
-    this.investmentService.setInvestData(this.investData());
+    this.investmentService.calculateInvestmentResults(this.investData());
+    this.resetForm();
   }
-
+  
+  private resetForm() {
+    this.investData.set({duration: '', annual: '', initial: '', expected: ''})
+  }
 }

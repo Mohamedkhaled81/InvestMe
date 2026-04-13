@@ -10,7 +10,7 @@
       </tr>
     </thead>
     <tbody>
-      @for (data of annualData; track $index) {
+      @for (data of annualData(); track $index) {
         <tr>
           <td>{{ data.year }}</td>
           <td>{{ data.valueEndOfYear | currency:'USD':'symbol'}}</td>
@@ -21,7 +21,7 @@
       }
     </tbody>
   </table>
-  @if (annualData.length === 0) {
+  @if (annualData().length === 0) {
     <h2>No Data Have Entered Yet</h2>
   }
 </div>
