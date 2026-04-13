@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: whitesmoke;
+    min-width: fit-content;
+    height: 100vh;
+    color: #444;
+}
+
+main {
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    gap: 50px;
+    flex-wrap: wrap;
+    padding: 40px;
+}
